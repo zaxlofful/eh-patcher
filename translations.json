@@ -50,7 +50,6 @@
     "cfg_group_empty": "Patch group '{name}' does not contain any items.",
     "extract_fail": "Extraction failed: {details}",
     "unknown": "Unknown error.",
-    "rar_requires_tool": "RAR archives require a bundled or installed extractor. Use ZIP for fully built-in extraction.",
     "no_active_sel_t": "Nothing Installed",
     "no_active_sel": "Select at least one installed patch to uninstall.",
     "already_installed_t": "Already Installed",
@@ -84,7 +83,7 @@
     "close": "Close",
     "search_at": "Searching in {root} - current location: {current}",
     "updates_asset_missing": "Automatic update could not continue because the release asset \"{asset}\" was not found in release {release}.",
-    "updates_auto_only": "Automatic update is only available in the published Windows executable.",
+    "updates_auto_only": "Automatic update downloads and replaces the current .ps1 script, then relaunches.",
     "using_cached_patch": "[{i}/{n}] Using saved patch '{name}' ..."
   },
   "de": {
@@ -138,7 +137,6 @@
     "cfg_group_empty": "Patch-Gruppe '{name}' enth\u00e4lt keine Eintr\u00e4ge.",
     "extract_fail": "Entpacken fehlgeschlagen: {details}",
     "unknown": "Unbekannter Fehler.",
-    "rar_requires_tool": "RAR-Archive ben\u00f6tigen einen mitgelieferten oder installierten Entpacker. F\u00fcr voll eingebaute Entpackung ZIP verwenden.",
     "no_active_sel_t": "Nichts installiert",
     "no_active_sel": "W\u00e4hle mindestens einen installierten Patch zur Deinstallation aus.",
     "already_installed_t": "Bereits installiert",
@@ -172,7 +170,7 @@
     "close": "Schlie\u00dfen",
     "search_at": "Suche in {root} - aktueller Ort: {current}",
     "updates_asset_missing": "Das automatische Update konnte nicht fortgesetzt werden, weil das Release-Asset \"{asset}\" in Release {release} nicht gefunden wurde.",
-    "updates_auto_only": "Das automatische Update ist nur in der ver\u00c3\u00b6ffentlichten Windows-EXE verf\u00c3\u00bcgbar.",
+    "updates_auto_only": "Das automatische Update l\u00e4dt das aktuelle .ps1-Skript herunter und startet es neu.",
     "using_cached_patch": "[{i}/{n}] Verwende gespeicherten Patch '{name}' ..."
   },
   "es": {
@@ -226,7 +224,6 @@
     "cfg_group_empty": "El grupo de parches '{name}' no contiene elementos.",
     "extract_fail": "La extracci\u00f3n fall\u00f3: {details}",
     "unknown": "Error desconocido.",
-    "rar_requires_tool": "Los archivos RAR requieren un extractor incluido o instalado. Usa ZIP para extracci\u00f3n totalmente integrada.",
     "no_active_sel_t": "Nada instalado",
     "no_active_sel": "Selecciona al menos un parche instalado para desinstalar.",
     "already_installed_t": "Ya instalado",
@@ -260,7 +257,7 @@
     "close": "Cerrar",
     "search_at": "Buscando en {root} - ubicaci\u00c3\u00b3n actual: {current}",
     "updates_asset_missing": "La actualizaci\u00c3\u00b3n autom\u00c3\u00a1tica no pudo continuar porque el recurso de la versi\u00c3\u00b3n \"{asset}\" no se encontr\u00c3\u00b3 en la versi\u00c3\u00b3n {release}.",
-    "updates_auto_only": "La actualizaci\u00c3\u00b3n autom\u00c3\u00a1tica solo est\u00c3\u00a1 disponible en el ejecutable de Windows publicado.",
+    "updates_auto_only": "La actualizaci\u00f3n autom\u00e1tica descarga y reemplaza el script .ps1 actual y lo reinicia.",
     "using_cached_patch": "[{i}/{n}] Usando el parche guardado '{name}' ..."
   },
   "it": {
@@ -314,7 +311,6 @@
     "cfg_group_empty": "Il gruppo di patch '{name}' non contiene elementi.",
     "extract_fail": "Estrazione non riuscita: {details}",
     "unknown": "Errore sconosciuto.",
-    "rar_requires_tool": "Gli archivi RAR richiedono un estrattore incluso o installato. Usa ZIP per un'estrazione completamente integrata.",
     "no_active_sel_t": "Niente installato",
     "no_active_sel": "Seleziona almeno una patch installata da disinstallare.",
     "already_installed_t": "Gi\u00e0 installato",
@@ -348,7 +344,7 @@
     "close": "Chiudi",
     "search_at": "Ricerca in {root} - posizione attuale: {current}",
     "updates_asset_missing": "L'aggiornamento automatico non ha potuto continuare perch? la risorsa della release \"{asset}\" non ? stata trovata nella release {release}.",
-    "updates_auto_only": "L'aggiornamento automatico ? disponibile solo nell'eseguibile Windows pubblicato.",
+    "updates_auto_only": "L'aggiornamento automatico scarica e sostituisce lo script .ps1 corrente, poi lo riavvia.",
     "using_cached_patch": "[{i}/{n}] Uso della patch salvata '{name}' ..."
   }
 }

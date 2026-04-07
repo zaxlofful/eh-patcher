@@ -10,9 +10,9 @@ A Patcher for Project Ebonhold allowing Users to modify/patch their game with vi
 - automatic Ebonhold folder search with remembered target path
 - install detection for active and manually present patches
 - per-patch uninstall support
-- support for direct file, `.zip`, and `.rar` patch sources
+- support for direct file and `.zip` patch sources
 - cached patch downloads for faster reinstallations
-- built-in GitHub update support for the published Windows executable
+- built-in GitHub update support
 - Large Address Aware / 4 GB client flag support
 - per-patch notices for compatibility and additional information
 - multilingual UI support
@@ -40,21 +40,25 @@ A Patcher for Project Ebonhold allowing Users to modify/patch their game with vi
 - Caverns & Mines Maps
     - Requires WDM & Astrolabe
 
-### Development
+### Usage
 
-Run locally:
+Run locally (no installation required — just PowerShell 5.1+, built into Windows 10/11):
 
 ```powershell
-python app.py
+powershell -ExecutionPolicy Bypass -File app.ps1
 ```
 
+Or right-click `app.ps1` → *Run with PowerShell*.
+
+No external tools are needed.
+ZIP archives are extracted with the built-in .NET `System.IO.Compression` library.
+
 ## Info
-This is a standalone .exe file; no installation is required.
-For a faster and smoother user experience, EH-Patcher saves your game location and downloaded patches within `%LOCALAPPDATA%\EH-Patcher`.
+No installation is required. The patcher saves your game location and downloaded patches in `%LOCALAPPDATA%\EH-Patcher`.
 
 ### Releases
 
-The application is distributed through GitHub.
+The application is distributed through GitHub as a plain `.ps1` script.
 https://github.com/SypherRed/eh-patcher/releases
 
 
@@ -62,7 +66,3 @@ https://github.com/SypherRed/eh-patcher/releases
 *Preview Image*
 https://i.imgur.com/9bW2Xjq.png
 
-
-**Virustotal**
-https://www.virustotal.com/gui/file/efc84c6ac0c9ac5940d2d4a20bf0215951259adb71de543bb78170ee78ae89c3/detection
-_Bkav Pro is known to falsely flag executables_
