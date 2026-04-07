@@ -10,7 +10,7 @@ A Patcher for Project Ebonhold allowing Users to modify/patch their game with vi
 - automatic Ebonhold folder search with remembered target path
 - install detection for active and manually present patches
 - per-patch uninstall support
-- support for direct file, `.zip`, and `.rar` patch sources
+- support for direct file and `.zip` patch sources
 - cached patch downloads for faster reinstallations
 - built-in GitHub update support
 - Large Address Aware / 4 GB client flag support
@@ -50,9 +50,8 @@ powershell -ExecutionPolicy Bypass -File app.ps1
 
 Or right-click `app.ps1` → *Run with PowerShell*.
 
-No external tools (7-Zip, WinRAR, Python, etc.) are needed.
+No external tools are needed.
 ZIP archives are extracted with the built-in .NET `System.IO.Compression` library.
-RAR archives are extracted via the Windows Shell.Application COM interface (no EXE required).
 
 ## Info
 No installation is required. The patcher saves your game location and downloaded patches in `%LOCALAPPDATA%\EH-Patcher`.

@@ -6,7 +6,6 @@
     No external EXE tools are required.
 .NOTES
     ZIP  : System.IO.Compression.ZipFile  (built-in .NET)
-    RAR  : Windows Shell.Application COM  (built-in Windows, no 7z/WinRAR EXE needed)
     HTTP : System.Net.HttpWebRequest      (built-in .NET)
     GUI  : System.Windows.Forms          (built-in Windows PowerShell)
 #>
@@ -304,7 +303,7 @@ function Get-GithubRelease([string]$Repo) {
     return ConvertFrom-Json $json
 }
 
-# ── Archive extraction — no external EXE ─────────────────────────────────────
+# ── Archive extraction ────────────────────────────────────────────────────────
 function Expand-ArchiveTo([string]$Archive, [string]$Dest, [string]$OutputName = '') {
     if (-not (Test-Path $Dest)) {
         New-Item -ItemType Directory -Path $Dest -Force | Out-Null
@@ -313,21 +312,6 @@ function Expand-ArchiveTo([string]$Archive, [string]$Dest, [string]$OutputName =
     switch ($ext) {
         '.zip' {
             [System.IO.Compression.ZipFile]::ExtractToDirectory($Archive, $Dest)
-        }
-        '.rar' {
-            # Windows Shell.Application — registered on every Windows machine; no 7z/WinRAR EXE needed
-            $shell   = New-Object -ComObject Shell.Application
-            $archive = $shell.NameSpace($Archive)
-            $folder  = $shell.NameSpace($Dest)
-            if ($null -eq $archive) { throw "Cannot open RAR archive: $Archive" }
-            $items = $archive.Items()
-            $folder.CopyHere($items, 0x14)  # 0x4 = no UI dialog | 0x10 = yes to all prompts
-            # CopyHere is asynchronous — poll until all items appear in destination
-            $deadline = [System.DateTime]::Now.AddMinutes(10)
-            while (([System.DateTime]::Now -lt $deadline) -and
-                   ($folder.Items().Count -lt $items.Count)) {
-                [System.Threading.Thread]::Sleep(300)
-            }
         }
         default {
             # Non-archive single file: stage as-is

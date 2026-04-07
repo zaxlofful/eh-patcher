@@ -43,11 +43,11 @@
           "sources": [
             {
               "label": "Primary Storage",
-              "url": "https://example.com/ebonhold/hd-textures.rar"
+              "url": "https://example.com/ebonhold/hd-textures.zip"
             },
             {
               "label": "Mirror Storage",
-              "url": "https://mirror.example.com/ebonhold/hd-textures.rar"
+              "url": "https://mirror.example.com/ebonhold/hd-textures.zip"
             }
           ]
         },
@@ -65,11 +65,11 @@
           "sources": [
             {
               "label": "Primary Storage",
-              "url": "https://example.com/ebonhold/enus-localization.rar"
+              "url": "https://example.com/ebonhold/enus-localization.zip"
             },
             {
               "label": "Mirror Storage",
-              "url": "https://mirror.example.com/ebonhold/enus-localization.rar"
+              "url": "https://mirror.example.com/ebonhold/enus-localization.zip"
             }
           ]
         },
@@ -87,7 +87,7 @@
           "sources": [
             {
               "label": "Primary Storage",
-              "url": "https://example.com/ebonhold/enus-localization-addon.rar"
+              "url": "https://example.com/ebonhold/enus-localization-addon.zip"
             }
           ]
         }
@@ -120,7 +120,7 @@
           "sources": [
             {
               "label": "Primary Storage",
-              "url": "https://example.com/ebonhold/map-base.rar"
+              "url": "https://example.com/ebonhold/map-base.zip"
             }
           ]
         },
@@ -191,11 +191,11 @@
           "sources": [
             {
               "label": "Primary Storage",
-              "url": "https://example.com/ebonhold/addon-pack.rar"
+              "url": "https://example.com/ebonhold/addon-pack.zip"
             },
             {
               "label": "Mirror Storage",
-              "url": "https://mirror.example.com/ebonhold/addon-pack.rar"
+              "url": "https://mirror.example.com/ebonhold/addon-pack.zip"
             }
           ]
         }
@@ -216,11 +216,11 @@
       "sources": [
         {
           "label": "Primary Storage",
-          "url": "https://example.com/ebonhold/shared-assets.rar"
+          "url": "https://example.com/ebonhold/shared-assets.zip"
         },
         {
           "label": "Mirror Storage",
-          "url": "https://mirror.example.com/ebonhold/shared-assets.rar"
+          "url": "https://mirror.example.com/ebonhold/shared-assets.zip"
         }
       ]
     },
