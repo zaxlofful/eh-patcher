@@ -400,7 +400,7 @@ function Load-State {
             $bAbs = Join-Path $Script:PatchData $bRel
             $expName = [System.IO.Path]::GetFileName($rPath)
             if (Test-Path $bAbs) {
-                if ($bAbs -match '^[0-9a-f]{16}-') {
+                if ([System.IO.Path]::GetFileName($bAbs) -match '^[0-9a-f]{16}-') {
                     $newPath = Join-Path (Split-Path $bAbs -Parent) $expName
                     if (-not (Test-Path $newPath)) {
                         try { [System.IO.File]::Move($bAbs, $newPath); $changed = $true } catch {}
@@ -1018,7 +1018,10 @@ function Sync-DetectedState([hashtable]$Patch, [string]$TargetRoot, [bool]$Activ
         })
         return $true
     }
-    if (-not $Active -and $rec -and $rec.PSObject.Properties.Name -contains 'detected_only' -and $rec.detected_only) {
+    $isDetectedOnly = $rec -and
+        ($rec.PSObject.Properties.Name -contains 'detected_only') -and
+        $rec.detected_only
+    if (-not $Active -and $isDetectedOnly) {
         Remove-Record $Patch.id $TargetRoot
         return $true
     }
