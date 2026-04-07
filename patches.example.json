@@ -2,7 +2,7 @@
   "app_update": {
     "github_repo": "your-org/eh-patcher",
     "current_version": "1.0.0",
-    "asset_name": "eh-patcher.exe"
+    "asset_name": "eh-patcher.ps1"
   },
   "patches": [
     {
